@@ -1,0 +1,276 @@
+@font-face {
+  font-family: karla-bold;
+  src: url(./fonts/Karla-Bold.ttf);
+}
+@font-face {
+  font-family: karla-bold-italic;
+  src: url(./fonts/Karla-BoldItalic.ttf);
+}
+@font-face {
+  font-family: karla-italic;
+  src: url(./fonts/Karla-Italic.ttf);
+}
+@font-face {
+  font-family: karla-regular;
+  src: url(./fonts/Karla-Regular.ttf);
+}
+body {
+  background-color: #ccc;
+}
+/* вся страница + фон */
+#whole, #background {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  overflow: hidden;
+}
+#whole {
+  max-width: 550px;
+  overflow: hidden;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.box {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #009CFF;
+  max-width: 550px;
+  overflow: hidden;
+}
+
+#triangle {
+  top: -10%;
+  left: -10%;
+  width: 100%;
+  height: 75%;
+  border-right: 600px solid RGBA(0, 139, 233, 0);
+  border-top: 600px solid RGBA(0, 139, 233, 0);
+  border-left: 600px solid RGBA(0, 139, 233, 1.00); 
+  border-bottom: 600px solid RGBA(0, 139, 233, 1.00); 
+}
+
+#blackBox {
+  position: absolute;
+  width: 100%;
+  height: 35%;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+}
+/* лого */
+#icon { 
+  position: absolute;
+  width: 100%;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  max-width: 550px;
+}
+#icon img {
+  width: 55%;
+  height: auto;
+  margin: 0;
+}
+#icon p {
+  font-size: 130px;
+  font-family: karla-bold;
+  color: white;
+  margin: 0;
+  position: relative;
+  left: -21%;
+  top: 8%;
+}
+/* форма входа в чат */
+#field {
+  position: absolute;
+  z-index: 100;
+  width: 80%;
+  height: 40%;
+  bottom: 7%;
+  left: 10%;
+  background-color: white;
+}
+
+#login {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#login p {
+  font-family: karla-bold;
+  font-size: 30px;
+  color: RGBA(185, 131, 129, 1.00);
+  text-transform: uppercase;
+}
+#login textarea { 
+  resize: none;
+  font-family: karla-regular;
+  font-size: 30px;
+  padding: 12px 15px;
+  border: none;
+  border-bottom: 2px solid RGBA(204, 204, 204, 1.00);
+  margin-bottom: 80px;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+#bottomButtons {
+  width: 100%;
+  height: 24%;
+  background-color: RGBA(0, 154, 255, 1.00);
+  margin: 30px 0 0 0;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#bottomButtons button {
+  height: 100%;
+  background-color: RGBA(255, 255, 255, 0);
+  color: white;
+  text-align: center;
+  border: none;
+  font-size: 20px;
+  font-family: karla-regular;
+  margin: 0 30px;
+}
+
+/* верхняя панель */
+#topPanel {
+  position: absolute;
+  z-index: 200;
+  top: -10%;
+  width: 100%;
+  height: 10%;
+  background-color: black;
+}
+#topPanel div {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#topPanel {
+  font-family: karla-regular, arial;
+  font-size: 18px;
+  color: RGBA(211, 211, 211, 1.00);
+}
+/* поле чата */
+#chat {
+  width: 100%;
+  height: 83%;
+  position: absolute;
+  top: 10%;
+  display: none;
+  z-index: 300;
+}
+/* время начала беседы */
+#timePanel {
+  position: relative;
+  width: 100%;
+  height: 5%;
+  top: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 15px 0;
+}
+#timePanel img {
+  width: 5%;
+  margin: 0 15px 0 0;
+}
+#time {
+  display: inline-block;
+  text-transform: uppercase;
+  color: white;
+  font-family: karla-regular;
+  font-size: 17px;
+}
+/* сообщения пользователя */
+.myMessage {
+  position: relative;
+  background-color: white;
+  color: RGBA(62, 62, 62, 1.00);
+  max-width: 70%;
+  padding: 12px 15px;
+  float: right;
+  right: 10px;
+  margin: 10px 10px;
+  box-shadow: 0 10px 30px RGBA(0, 0, 0, 0.2);
+  font-family: karla-regular, arial;
+  font-size: 17px;
+  clear: both;
+}
+/* добавление нового сообщения */
+#messageField {
+  width: 100%;
+  height: 7%;
+  position: absolute;
+  bottom: -15%;
+  z-index: 301;
+  
+}
+#createMessage {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+#message {
+  resize: none;
+  padding: 5px 10px;
+  margin: 0 20px;
+  color: white;
+  font-family: karla-regular, arial;
+  font-size: 18px;
+  background-color: RGBA(62, 62, 62, 0);
+  border: none;
+}
+::placeholder {
+  color: white;
+}
+#send {
+  background-color: RGBA(255, 184, 180, 1.00);
+  width: 60px;
+  height: 60px;
+  border-radius: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  margin: 0 30px 10% 0;
+}
+#send img {
+  width: 55%;
+}
+/* информация об имени пользователя и времени отправки сообщения */
+.myInfo {
+  color: RGBA(191, 142, 140, 1.00);
+  font-size: 12px;
+  font-family: karla-regular;
+  float: right;
+  clear: both;
+  margin-top: 10px;
+  text-transform: capitalize;
+}

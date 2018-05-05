@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Chat</title>
+
+    <link rel="stylesheet" type="text/css" href="normalize.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="jquery-3.1.1.js"></script>
+    <script src="jquery-css-transform.js"></script>
+    <script src="script.js"></script>
+</head>
+
+<body>
+  <!-- вся страница -->
+  <div id="whole">
+    <!-- фон -->
+    <div id="background">
+      <div class="box">
+        <div id="triangle"></div>
+        <div id="blackBox"></div>
+      </div>
+      <!-- лого -->
+      <div id="icon">
+        <p>Chat</p>
+        <img src="./media/Icon.png" alt="Chat icon">
+      </div>
+    </div>
+    <!-- форма входа в чат -->
+    <div id="field">
+      <form action="" id="login">
+        <p>username</p>
+        <textarea id="username" cols="15" rows="1"></textarea>
+        <div id="bottomButtons">
+          <button id="startGuest">Guest</button>
+          <button id="startChat">Get Started</button>
+        </div>
+      </form>
+    </div>
+    <!-- верхняя панель "Тестовое задание" -->
+    <div id="topPanel">
+      <div>
+          <p>Тестовое задание</p>
+      </div>
+    </div>
+    <!-- поле чата (все сообщения) -->
+    <div id="chat">
+      <div id="timePanel">
+        <img src="./media/clock.png">
+        <p id="time"></p>
+      </div>
+    </div>
+    <!-- ввод нового сообщения -->
+    <div id="messageField">
+      <form action="" id="createMessage">
+        <textarea id="message" cols="30" rows="1" placeholder="Type message..."></textarea>
+        <button id="send"><img src="./media/send.png"></button>
+      </form>
+    </div>
+  </div>
+
+</body>
+
+</html>
+
